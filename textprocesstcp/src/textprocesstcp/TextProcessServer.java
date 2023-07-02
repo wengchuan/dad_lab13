@@ -8,6 +8,14 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * This class is the Server application
+ * This class will receive the text from the user and translate it
+ *
+ * 
+ * @author wengchuan
+ *
+ */
 public class TextProcessServer {
     public static void main(String[] args) throws IOException {
         // Launch the server frame
@@ -60,6 +68,14 @@ public class TextProcessServer {
         }
     }
 
+    
+    
+    /**
+     * This method will count the text 
+     * 
+     * @param text
+     * @return
+     */
     public int CountText(String text) {
         if (text == null || text.isEmpty()) {
             return 0;

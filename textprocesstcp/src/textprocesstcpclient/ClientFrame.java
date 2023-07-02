@@ -205,7 +205,11 @@ public class ClientFrame extends JFrame {
 		return font;
 
 	}
-	//This method will send the string to the server 
+	
+	/**
+	 * This method will send the string to the server 
+	 * @param text
+	 */
 	public void passData(String text) {
 	    try {
 	        // Create streams for communication
@@ -220,7 +224,13 @@ public class ClientFrame extends JFrame {
 	        e.printStackTrace();
 	    }
 	}
-	//get the socket from main function
+	
+	
+	/**
+	 * get the socket from main function
+	 * 
+	 * @param socket
+	 */
 	public void setSocket(Socket socket) {
 		this.socket=socket;
 	}

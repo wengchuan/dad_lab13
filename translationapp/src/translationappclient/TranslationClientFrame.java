@@ -17,6 +17,13 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+
+/**
+ * This class is the frame for the Client Application
+ * This class is handling the GUI
+ * @author wengchuan
+ *
+ */
 public class TranslationClientFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
@@ -227,7 +234,11 @@ public class TranslationClientFrame extends JFrame {
 
 	}
 
-	// This method will send the string to the server
+	
+	/**
+	 * This method will send the string to the server
+	 * @param text
+	 */
 	public void passData(String text) {
 		try {
 			
@@ -241,7 +252,12 @@ public class TranslationClientFrame extends JFrame {
 		}
 	}
 
-	// get the socket from main function
+	
+	/**
+	 * 
+	 * get the socket from main function
+	 * @param socket
+	 */
 	public void setSocket(Socket socket) {
 		this.socket = socket;
 		// Create streams for communication
@@ -255,7 +271,13 @@ public class TranslationClientFrame extends JFrame {
 		
 	}
 
-	// set the selected language
+
+	
+	/**
+	 * set the selected language
+	 * 
+	 * @param language
+	 */
 	public void handleLanguageSelection(String language) {
 		selectedLanguage = language; // Update the selected language
 

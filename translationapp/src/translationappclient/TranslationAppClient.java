@@ -7,6 +7,13 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 
+
+/**
+ * This class is the client side for the Translation Application
+ * This class will receive the translated text from sever 
+ * @author wengchuan
+ *
+ */
 public class TranslationAppClient {
   public static void main(String[] args) throws UnknownHostException, IOException {
 

@@ -9,6 +9,13 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
+/**
+ * This class is the client side application
+ * This class will send the text to the server
+ * This class will receive the number of character from server
+ * @author wengchuan
+ *
+ */
 public class TextProcessClient {
 
     public static void main(String[] args) throws UnknownHostException, IOException {

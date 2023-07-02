@@ -9,6 +9,14 @@ import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
+
+
+/**
+ * This class is the client side application
+ * it will send the English text and the translate language to the server
+ * @author wengchuan
+ *
+ */
 public class ClientTranslationApplication {
 	public static void main(String[] args) {
 		System.out.println("Select the Text To Translate:");

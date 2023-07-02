@@ -10,6 +10,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+
+/**
+ * This class is handling the server GUI
+ * 
+ * @author wengchuan
+ *
+ */
 public class ServerFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;

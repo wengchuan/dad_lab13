@@ -7,6 +7,18 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * This is the server application
+ * 
+ * This class will receive the text and the language the user want to 
+ * translate and translate it and send it back to the user
+ * 
+ * 
+ * @author wengchuan
+ *
+ */
+
+
 public class ServerTranslationApplication {
 
 	public static void main(String[] args) throws IOException {
@@ -53,7 +65,14 @@ public class ServerTranslationApplication {
 
 	}
 
-	
+	  
+	/**
+	 * This method will translate the text
+	 * 
+	 * @param text
+	 * @param language
+	 * @return
+	 */
 	public String TextTranslate(String text,String language) {
 		String translatedText="";
 		if(language.equals("malay")){

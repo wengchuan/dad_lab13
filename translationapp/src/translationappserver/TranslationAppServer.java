@@ -7,6 +7,17 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 
+
+
+/**
+ * 
+ * This class is the server side for the translation Application
+ * This class is handling the client request for the translation 
+ * 
+ * @author wengchuan
+ *
+ */
+
 public class TranslationAppServer {
 	public static void main(String[] args) throws IOException {
 		ServerSocket serverSocket = null;
@@ -37,9 +48,11 @@ public class TranslationAppServer {
 					targetLanguage = inputStream.readUTF();
 
 					// Update the server frame with the Data request from client
-					translationServerFrame.updateRequestStatus("Data getting from the client: " + inputText);
+					translationServerFrame.updateRequestStatus("Data getting from the client: "
+					+ inputText);
 					translationServerFrame
-							.updateRequestStatus("The language want to translate from the client: " + targetLanguage);
+							.updateRequestStatus("The language want to translate from the client: " 
+					+ targetLanguage);
 
 					String translatedText = "";
 
@@ -47,14 +60,17 @@ public class TranslationAppServer {
 
 					// Send the translated text to the client
 					outputStream.writeUTF(
-							new String(translatedText.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1));
+							new String(translatedText.getBytes(StandardCharsets.UTF_8), 
+									StandardCharsets.ISO_8859_1));
 					outputStream.flush();
 					System.out.println(translatedText);
 					// Update the server frame with the calculated text length
 					translationServerFrame.updateRequestStatus("Data sent to the client: "
-							+ new String(translatedText.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1));
+							+ new String(translatedText.getBytes(StandardCharsets.UTF_8), 
+									StandardCharsets.ISO_8859_1));
 					translationServerFrame.updateRequestStatus(
-							"Accepted connection from the client. Total requests = " + ++totalRequest);
+							"Accepted connection from the client. Total requests = " +
+					++totalRequest);
 				}
 				// Close the socket
 				// clientSocket.close();
@@ -68,7 +84,15 @@ public class TranslationAppServer {
 		}
 
 	}
-
+	
+	
+	
+	/**
+	 * This method is handling the translation text
+	 * @param text
+	 * @param language
+	 * @return
+	 */
 	public String TextTranslate(String text, String language) {
 		String translatedText = "";
 		if (language.equals("malay")) {
