@@ -31,15 +31,16 @@ public class ServerTranslationApplication {
 				DataInputStream inputStream = new DataInputStream(clientSocket.getInputStream());
 				inputText = inputStream.readUTF();
 				targetLanguage = inputStream.readUTF();
-
-				String translatedText="";
 				
+				String translatedText="";
+				System.out.println("Read from client Text:"+inputText+" "+" Language: "+targetLanguage);
 				translatedText=serverTranslationApplication.TextTranslate(inputText,targetLanguage);
 				
 				// Create stream to write data on the network
 				DataOutputStream outputStream = new DataOutputStream(clientSocket.getOutputStream());
 				// Send the translated text to the client
 				outputStream.writeUTF(new String(translatedText.getBytes(StandardCharsets.UTF_8), StandardCharsets.ISO_8859_1));
+				System.out.println("sending to client Text:"+translatedText+" "+" Language: "+targetLanguage);
 				// Close the socket
 				clientSocket.close();
 			}
